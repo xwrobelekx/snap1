@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="130.88455772113943"/>
         </scene>
-        <!--View Controller-->
+        <!--Snaps View Controller-->
         <scene sceneID="G8n-Sf-quD">
             <objects>
-                <viewController id="A8K-Gb-oTl" sceneMemberID="viewController">
+                <viewController id="A8K-Gb-oTl" customClass="SnapsViewController" customModule="snap1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iaR-aD-0Mb"/>
                         <viewControllerLayoutGuide type="bottom" id="AuJ-KI-bqO"/>
@@ -88,9 +88,15 @@
                     <view key="view" contentMode="scaleToFill" id="BFQ-6E-TUC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.45503773719303986" green="0.98729276402137511" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9CG-ba-XUc"/>
+                    <navigationItem key="navigationItem" id="9CG-ba-XUc">
+                        <barButtonItem key="leftBarButtonItem" title="logout" id="Pvj-6X-YnL">
+                            <connections>
+                                <action selector="logoutTapped3:" destination="A8K-Gb-oTl" id="NYh-3y-uo2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BMz-Ej-1A6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
