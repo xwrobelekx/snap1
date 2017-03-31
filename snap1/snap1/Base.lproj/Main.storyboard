@@ -28,13 +28,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HjD-gA-bQE">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="kamil@wrobel2.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HjD-gA-bQE">
                                 <rect key="frame" x="62" y="142" width="250" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fse-Sg-8rC">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="wrobel25%" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fse-Sg-8rC">
                                 <rect key="frame" x="62" y="198" width="250" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -70,11 +70,49 @@
                     <connections>
                         <outlet property="emailTextField" destination="HjD-gA-bQE" id="w11-A6-FNY"/>
                         <outlet property="passwordTextField" destination="fse-Sg-8rC" id="tJu-W2-DfE"/>
+                        <segue destination="fnS-ho-ZVM" kind="presentation" identifier="signinsegue" id="Idj-wf-BvS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="130.88455772113943"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="G8n-Sf-quD">
+            <objects>
+                <viewController id="A8K-Gb-oTl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iaR-aD-0Mb"/>
+                        <viewControllerLayoutGuide type="bottom" id="AuJ-KI-bqO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BFQ-6E-TUC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9CG-ba-XUc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BMz-Ej-1A6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.5999999999999" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W9s-v9-1pK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fnS-ho-ZVM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I4G-K0-7Uj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="A8K-Gb-oTl" kind="relationship" relationship="rootViewController" id="xYv-Wx-QlA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wBS-CG-G8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="914.39999999999998" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
