@@ -24,6 +24,8 @@ class SnapsViewController: UIViewController {
         dismiss(animated: true, completion: nil)
         print("logged Out")
         
+        // this dismisses the segue, and brings you back to to login screen when logout is pressed.
+        
     }
    
 
