@@ -10,6 +10,7 @@
 		1124372030FE368B17198760 /* Pods_snap1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F407D5C456A3502D67F88276 /* Pods_snap1.framework */; };
 		8404D5421E8EE3630083DC54 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8404D5411E8EE3630083DC54 /* SnapsViewController.swift */; };
 		8404D5441E9016920083DC54 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8404D5431E9016920083DC54 /* PictureViewController.swift */; };
+		8404D5461E93EB5D0083DC54 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8404D5451E93EB5D0083DC54 /* SelectUserViewController.swift */; };
 		84F3A3941E8DF2EA003E52A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3A3931E8DF2EA003E52A4 /* AppDelegate.swift */; };
 		84F3A3961E8DF2EA003E52A4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3A3951E8DF2EA003E52A4 /* SignInViewController.swift */; };
 		84F3A3991E8DF2EA003E52A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F3A3971E8DF2EA003E52A4 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		38F4CC964A2924CE820E8D82 /* Pods-snap1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snap1.release.xcconfig"; path = "Pods/Target Support Files/Pods-snap1/Pods-snap1.release.xcconfig"; sourceTree = "<group>"; };
 		8404D5411E8EE3630083DC54 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 		8404D5431E9016920083DC54 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		8404D5451E93EB5D0083DC54 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
 		84F3A3901E8DF2EA003E52A4 /* snap1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snap1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F3A3931E8DF2EA003E52A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84F3A3951E8DF2EA003E52A4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				84F3A3951E8DF2EA003E52A4 /* SignInViewController.swift */,
 				8404D5411E8EE3630083DC54 /* SnapsViewController.swift */,
 				8404D5431E9016920083DC54 /* PictureViewController.swift */,
+				8404D5451E93EB5D0083DC54 /* SelectUserViewController.swift */,
 				84F3A3971E8DF2EA003E52A4 /* Main.storyboard */,
 				84F3A39A1E8DF2EA003E52A4 /* Assets.xcassets */,
 				84F3A39C1E8DF2EA003E52A4 /* LaunchScreen.storyboard */,
@@ -223,6 +226,7 @@
 			files = (
 				84F3A3961E8DF2EA003E52A4 /* SignInViewController.swift in Sources */,
 				8404D5441E9016920083DC54 /* PictureViewController.swift in Sources */,
+				8404D5461E93EB5D0083DC54 /* SelectUserViewController.swift in Sources */,
 				84F3A3941E8DF2EA003E52A4 /* AppDelegate.swift in Sources */,
 				8404D5421E8EE3630083DC54 /* SnapsViewController.swift in Sources */,
 			);
