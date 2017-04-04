@@ -69,16 +69,23 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         let imagesFolder = FIRStorage.storage().reference().child("images")
         
-        let imageData = UIImagePNGRepresentation(imageView.image!)!
+        let imageData = UIImageJPEGRepresentation(imageView.image!, 0.1)
         
         
-        imagesFolder.child("images.png").put(imageData, metadata: nil, completion:{(metadata, error) in
+        // this NSUUID() created a unike number each time we upload a picture to fire base
+        
+        
+        imagesFolder.child("\(NSUUID().uuidString).jpeg)").put(imageData!, metadata: nil, completion:{(metadata, error) in
             
             print("we tried to upload")
             
             if error != nil {
                 print("we have an error: \(error)")
             } else {
+                
+               print(metadata?.downloadURL()! as Any)
+                // this downloadns and prints the url of the image
+                
                   self.performSegue(withIdentifier: "selectUserSegue" , sender: nil)
             }
             
