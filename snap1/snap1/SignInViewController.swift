@@ -45,7 +45,7 @@ class SignInViewController: UIViewController {
                 } else {
                     print("created user sucesfully")
                     
-                  FIRDatabase.database().reference().child("users").child(user!.uid).child("emial").setValue(user!.email)
+                  FIRDatabase.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email)
                     
                     
                     

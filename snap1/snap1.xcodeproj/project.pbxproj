@@ -11,6 +11,7 @@
 		8404D5421E8EE3630083DC54 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8404D5411E8EE3630083DC54 /* SnapsViewController.swift */; };
 		8404D5441E9016920083DC54 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8404D5431E9016920083DC54 /* PictureViewController.swift */; };
 		8404D5461E93EB5D0083DC54 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8404D5451E93EB5D0083DC54 /* SelectUserViewController.swift */; };
+		8404D5481E93F2060083DC54 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8404D5471E93F2060083DC54 /* user.swift */; };
 		84F3A3941E8DF2EA003E52A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3A3931E8DF2EA003E52A4 /* AppDelegate.swift */; };
 		84F3A3961E8DF2EA003E52A4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3A3951E8DF2EA003E52A4 /* SignInViewController.swift */; };
 		84F3A3991E8DF2EA003E52A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F3A3971E8DF2EA003E52A4 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		8404D5411E8EE3630083DC54 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 		8404D5431E9016920083DC54 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		8404D5451E93EB5D0083DC54 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
+		8404D5471E93F2060083DC54 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		84F3A3901E8DF2EA003E52A4 /* snap1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snap1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F3A3931E8DF2EA003E52A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84F3A3951E8DF2EA003E52A4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8404D5491E93F24D0083DC54 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84F3A3951E8DF2EA003E52A4 /* SignInViewController.swift */,
+				8404D5411E8EE3630083DC54 /* SnapsViewController.swift */,
+				8404D5431E9016920083DC54 /* PictureViewController.swift */,
+				8404D5451E93EB5D0083DC54 /* SelectUserViewController.swift */,
+				8404D54A1E93F2D00083DC54 /* Models */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8404D54A1E93F2D00083DC54 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8404D5471E93F2060083DC54 /* user.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		84F3A3871E8DF2EA003E52A4 = {
 			isa = PBXGroup;
 			children = (
@@ -78,11 +100,8 @@
 		84F3A3921E8DF2EA003E52A4 /* snap1 */ = {
 			isa = PBXGroup;
 			children = (
+				8404D5491E93F24D0083DC54 /* ViewControllers */,
 				84F3A3931E8DF2EA003E52A4 /* AppDelegate.swift */,
-				84F3A3951E8DF2EA003E52A4 /* SignInViewController.swift */,
-				8404D5411E8EE3630083DC54 /* SnapsViewController.swift */,
-				8404D5431E9016920083DC54 /* PictureViewController.swift */,
-				8404D5451E93EB5D0083DC54 /* SelectUserViewController.swift */,
 				84F3A3971E8DF2EA003E52A4 /* Main.storyboard */,
 				84F3A39A1E8DF2EA003E52A4 /* Assets.xcassets */,
 				84F3A39C1E8DF2EA003E52A4 /* LaunchScreen.storyboard */,
@@ -226,6 +245,7 @@
 			files = (
 				84F3A3961E8DF2EA003E52A4 /* SignInViewController.swift in Sources */,
 				8404D5441E9016920083DC54 /* PictureViewController.swift in Sources */,
+				8404D5481E93F2060083DC54 /* user.swift in Sources */,
 				8404D5461E93EB5D0083DC54 /* SelectUserViewController.swift in Sources */,
 				84F3A3941E8DF2EA003E52A4 /* AppDelegate.swift in Sources */,
 				8404D5421E8EE3630083DC54 /* SnapsViewController.swift in Sources */,
