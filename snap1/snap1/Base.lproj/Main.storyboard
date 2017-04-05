@@ -28,7 +28,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="kamil@wrobel3.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HjD-gA-bQE">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="kammil@wrobel3.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HjD-gA-bQE">
                                 <rect key="frame" x="62" y="142" width="250" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -80,7 +80,7 @@
         <!--Snaps View Controller-->
         <scene sceneID="G8n-Sf-quD">
             <objects>
-                <viewController id="A8K-Gb-oTl" customClass="SnapsViewController" customModule="snap1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="A8K-Gb-oTl" customClass="SnapsViewController" customModule="snap1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iaR-aD-0Mb"/>
                         <viewControllerLayoutGuide type="bottom" id="AuJ-KI-bqO"/>
@@ -88,7 +88,19 @@
                     <view key="view" contentMode="scaleToFill" id="BFQ-6E-TUC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" alpha="0.75" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2IJ-IR-9Ew">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.45503773719303986" green="0.98729276402137511" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2IJ-IR-9Ew" firstAttribute="leading" secondItem="BFQ-6E-TUC" secondAttribute="leading" id="3g0-iE-8rz"/>
+                            <constraint firstAttribute="trailing" secondItem="2IJ-IR-9Ew" secondAttribute="trailing" id="Vii-lF-VJJ"/>
+                            <constraint firstItem="AuJ-KI-bqO" firstAttribute="top" secondItem="2IJ-IR-9Ew" secondAttribute="bottom" id="ocS-cz-eUN"/>
+                            <constraint firstItem="2IJ-IR-9Ew" firstAttribute="top" secondItem="iaR-aD-0Mb" secondAttribute="bottom" id="ua6-RI-2xT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9CG-ba-XUc">
                         <barButtonItem key="leftBarButtonItem" title="logout" id="Pvj-6X-YnL">
@@ -102,10 +114,56 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView5" destination="2IJ-IR-9Ew" id="DK1-R7-3Pu"/>
+                        <segue destination="5tv-xc-jMh" kind="show" identifier="viewSnapSegue" id="cUb-hH-F9P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BMz-Ej-1A6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1853.5999999999999" y="132.68365817091455"/>
+        </scene>
+        <!--View Snap View Controller-->
+        <scene sceneID="fYw-89-7pf">
+            <objects>
+                <viewController id="5tv-xc-jMh" customClass="ViewSnapViewController" customModule="snap1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6lt-Vc-FKa"/>
+                        <viewControllerLayoutGuide type="bottom" id="VI4-ML-ZTV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7HZ-za-ioL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is me saying hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxa-7v-HQd">
+                                <rect key="frame" x="5" y="633" width="365" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iJI-yD-9tO">
+                                <rect key="frame" x="10" y="74" width="355" height="549"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.680390651622794" blue="0.69477276306156122" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Dxa-7v-HQd" secondAttribute="trailing" constant="5" id="0qC-f1-s9s"/>
+                            <constraint firstItem="VI4-ML-ZTV" firstAttribute="top" secondItem="Dxa-7v-HQd" secondAttribute="bottom" constant="10" id="6IQ-Y2-Tha"/>
+                            <constraint firstItem="iJI-yD-9tO" firstAttribute="top" secondItem="6lt-Vc-FKa" secondAttribute="bottom" constant="10" id="XTU-R1-Ybu"/>
+                            <constraint firstAttribute="trailing" secondItem="iJI-yD-9tO" secondAttribute="trailing" constant="10" id="XTs-mL-tNF"/>
+                            <constraint firstItem="iJI-yD-9tO" firstAttribute="leading" secondItem="7HZ-za-ioL" secondAttribute="leading" constant="10" id="YQ9-7x-zKY"/>
+                            <constraint firstItem="Dxa-7v-HQd" firstAttribute="top" secondItem="iJI-yD-9tO" secondAttribute="bottom" constant="10" id="aY9-UF-q7G"/>
+                            <constraint firstItem="Dxa-7v-HQd" firstAttribute="leading" secondItem="7HZ-za-ioL" secondAttribute="leading" constant="5" id="kGd-3R-ZKT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView4" destination="iJI-yD-9tO" id="Fod-cd-lFX"/>
+                        <outlet property="textLabel4" destination="Dxa-7v-HQd" id="47E-pa-naM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfK-yr-QwU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1854" y="898"/>
         </scene>
         <!--Picture View Controller-->
         <scene sceneID="6od-sg-l42">
@@ -119,7 +177,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JM0-qn-8fm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JM0-qn-8fm">
                                 <rect key="frame" x="21" y="69" width="343" height="230.5"/>
                                 <color key="backgroundColor" red="0.64009405970101207" green="0.64538863186345363" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>

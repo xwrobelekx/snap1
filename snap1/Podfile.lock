@@ -40,12 +40,16 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.9)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
   - Firebase
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Storage
+  - SDWebImage
 
 SPEC CHECKSUMS:
   Firebase: 2b1cdfba1cda8589f32904a697cc753322bff9d8
@@ -57,7 +61,8 @@ SPEC CHECKSUMS:
   FirebaseStorage: a5c55b23741a49a72af8f30f95b3bb5ddbeda12d
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: f23565bc748617c87363422a95688ca084988162
+PODFILE CHECKSUM: 7b650e8436f8b67cc0c57613deea8b8eecd457a0
 
 COCOAPODS: 1.2.0
