@@ -16,13 +16,16 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     
     var users3 : [User] = []
     
+    var imageURL = ""
+    var descrip = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
        self.tableView1.dataSource = self
         self.tableView1.delegate = self
         
-        
+            //observe is a way to pull the data from firebase
         FIRDatabase.database().reference().child("users").observe(FIRDataEventType.childAdded, with: {(FIRDataSnapshot) in
             print(FIRDataSnapshot)
             
@@ -55,6 +58,15 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         cell.textLabel?.text = user.email
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let user = users3[indexPath.row]
+        
+        let snap = ["from" : user.email, "description" : descrip, "imageURL" : imageURL]
+        
+        FIRDatabase.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
     }
     
     
