@@ -30,6 +30,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         imagePicker.delegate = self
         
+        nextButtonOutlet.isEnabled = false
+        
         
     }
     
@@ -42,6 +44,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         imageView.backgroundColor = UIColor.clear
         
+        nextButtonOutlet.isEnabled = true
         
         imagePicker.dismiss(animated: true, completion: nil)
         
