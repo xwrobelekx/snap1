@@ -8,6 +8,10 @@
 
 import UIKit
 import SDWebImage
+import FirebaseDatabase
+import Firebase
+import FirebaseAuth
+import FirebaseStorage
 
 class ViewSnapViewController: UIViewController {
 
@@ -35,11 +39,15 @@ class ViewSnapViewController: UIViewController {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillDisappear(_ animated: Bool) {
+            FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("snaps").child(snap3.key).removeValue()
+        
+        FIRStorage.storage().reference().child("images").child("\(snap3.uuid).jpeg)").delete { (error) in
+            print("we deleted the pic.")
+        }
+        
+        
     }
-    
 
  
 

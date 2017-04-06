@@ -20,6 +20,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     var imagePicker = UIImagePickerController()
     
+    var uuid = NSUUID().uuidString
     
     
     override func viewDidLoad() {
@@ -75,7 +76,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // this NSUUID() created a unike number each time we upload a picture to fire base
         
         
-        imagesFolder.child("\(NSUUID().uuidString).jpeg)").put(imageData!, metadata: nil, completion:{(metadata, error) in
+        imagesFolder.child("\(uuid).jpeg)").put(imageData!, metadata: nil, completion:{(metadata, error) in
             
             print("we tried to upload")
             
@@ -106,7 +107,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         let nextVC = segue.destination as! SelectUserViewController
         nextVC.imageURL = sender as! String
         nextVC.descrip = descriptionTextField.text!
-        
+        nextVC.uuid = uuid
     }
     
 

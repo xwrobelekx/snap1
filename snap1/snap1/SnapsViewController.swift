@@ -33,7 +33,8 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             snap.from = (FIRDataSnapshot.value as! NSDictionary)["from"] as! String
             snap.descrip2 = (FIRDataSnapshot.value as! NSDictionary)["description"] as! String
             snap.imageURL = (FIRDataSnapshot.value as! NSDictionary)["imageURL"] as! String
-            
+            snap.key = FIRDataSnapshot.key
+             snap.uuid = (FIRDataSnapshot.value as! NSDictionary)["uuid"] as! String
             
             self.snaps.append(snap)
             
@@ -43,6 +44,26 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
         })
 
+        // this removes snaps, i mean the removes the "snap" from table view, the snap gets deleted from fire base in view snap VC
+        
+        FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("snaps").observe(FIRDataEventType.childRemoved, with: {(FIRDataSnapshot) in
+            print(FIRDataSnapshot)
+            
+   
+            var index = 0
+            
+            for snap in self.snaps {
+                if snap.key == FIRDataSnapshot.key {
+                    self.snaps.remove(at: index)
+                }
+                
+                index += 1
+            }
+            
+            self.tableView5.reloadData()
+        })
+        
+        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

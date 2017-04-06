@@ -69,8 +69,8 @@
 				84F3A3951E8DF2EA003E52A4 /* SignInViewController.swift */,
 				8404D5411E8EE3630083DC54 /* SnapsViewController.swift */,
 				8404D5431E9016920083DC54 /* PictureViewController.swift */,
-				8404D54D1E9579370083DC54 /* ViewSnapViewController.swift */,
 				8404D5451E93EB5D0083DC54 /* SelectUserViewController.swift */,
+				8404D54D1E9579370083DC54 /* ViewSnapViewController.swift */,
 				8404D54A1E93F2D00083DC54 /* Models */,
 			);
 			name = ViewControllers;
