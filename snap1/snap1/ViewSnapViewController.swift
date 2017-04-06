@@ -42,7 +42,7 @@ class ViewSnapViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
             FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("snaps").child(snap3.key).removeValue()
         
-        FIRStorage.storage().reference().child("images").child("\(snap3.uuid).jpeg)").delete { (error) in
+        FIRStorage.storage().reference().child("images").child("\(snap3.uuid).jpeg").delete { (error) in
             print("we deleted the pic.")
         }
         
